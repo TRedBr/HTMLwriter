@@ -20,6 +20,8 @@ def read_from_html(title):
 
 def add_paragraph_with_header_to_html(title):   #needs test if html exists
     red_html = read_from_html(title)
+    with open(f"test.html", "wt") as prepfile:
+        prepfile.write(f"{red_html}")
     headline = input("please enter a headline for the paragraph")
     paragraph = input("please enter the paragraph")
     with open(f"test.html", "at") as f:
